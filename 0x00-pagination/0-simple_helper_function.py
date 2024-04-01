@@ -5,6 +5,7 @@
 
 from typing import Tuple, List
 
+
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     index_range
