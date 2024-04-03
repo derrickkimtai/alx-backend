@@ -10,5 +10,4 @@
 
 
 is talked about in this directory
-```  kim '''
-``
+```  kim@ubuntu:~/0x01-caching$ ls
