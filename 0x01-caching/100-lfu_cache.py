@@ -26,10 +26,14 @@ class LFUCache(BaseCaching):
             else:
                 if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                     min_lfu = min(self.lfu_count.values())
-                    min_keys = [k for k in self.lfu_count if self.lfu_count[k] == min_lfu]
+                    min_keys = []
+                    for k, v in self.lfu_count.items():
+                        if v == min_lfu:
+                            min_keys.append(k)
                     discard = min_keys[0]
                     for k in min_keys:
-                        if len(self.cache_data[k]) < len(self.cache_data[discard]):
+                        if len(self.cache_data[k]) < len(
+                                self.cache_data[discard]):
                             discard = k
                     print('DISCARD:', discard)
                     del self.cache_data[discard]
