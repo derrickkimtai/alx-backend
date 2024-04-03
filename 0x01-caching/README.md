@@ -5,7 +5,7 @@
 <h2> What MRU means <h2>
 <h2> What LFU means <h2>
 <h2> What the purpose of a caching system <h2>
-<h2> What limits a caching system have <h2>
+'''<h2> What limits a caching system have <h2>
 
 
 
