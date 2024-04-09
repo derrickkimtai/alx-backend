@@ -6,14 +6,16 @@ from typing import List, Tuple
 
 app = Flask(__name__)
 
-@app.route('/') # type: ignore
-def index(): # type: ignore
+
+@app.route('/')
+def index():
     """ Main route
 
     Returns:
         str: template
     """
     return render_template('0-index.html')
+
 
 if __name__ == '__main__':
     app.run()
