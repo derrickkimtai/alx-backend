@@ -6,9 +6,11 @@ from flask_babel import Babel
 app = Flask(__name__)
 babel = Babel(app)
 
+
 class Config:
     """ Config class """
     LANGUAGES = ["en", "fr"]
+
 
 @app.route('/')
 def index():
@@ -18,3 +20,7 @@ def index():
         str: template
     """
     return render_template('1-index.html')
+
+
+if __name__ == '__main__':
+    app.run()
