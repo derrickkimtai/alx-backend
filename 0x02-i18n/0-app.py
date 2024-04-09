@@ -2,11 +2,12 @@
 """ Basic Flask app, Basic Babel setup
 """
 from flask import Flask, render_template
+from typing import List, Tuple
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
+@app.route('/') # type: ignore
+def index(): # type: ignore
     """ Main route
 
     Returns:
